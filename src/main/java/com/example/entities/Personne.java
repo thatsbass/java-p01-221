@@ -1,7 +1,6 @@
 package com.example.entities;
 
 import java.sql.Date;
-
 import com.example.interfaces.Identifiable;
 
 
@@ -11,7 +10,6 @@ public class Personne implements Identifiable {
     private String nom;
     private String prenom;
     private Date date_naissance;
-
 
     public Personne() {
     }

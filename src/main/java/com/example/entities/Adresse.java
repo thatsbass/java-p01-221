@@ -47,19 +47,19 @@ public class Adresse implements Identifiable {
         this.rue = rue;
     }
 
-    public String getNumeroVilla() { // correction du getter
+    public String getNumeroVilla() { 
         return numero_villa;
     }
 
-    public void setNumeroVilla(String numeroVilla) { // correction du setter
+    public void setNumeroVilla(String numeroVilla) { 
         this.numero_villa = numeroVilla;
     }
 
-    public int getPersonneId() { // correction du getter
+    public int getPersonneId() {
         return personne_id;
     }
 
-    public void setPersonneId(int personneId) { // correction du setter
+    public void setPersonneId(int personneId) { 
         this.personne_id = personneId;
     }
 }

@@ -28,7 +28,7 @@ public abstract class Model<T> {
      */
     public List<T> findAll() throws SQLException {
         String query = "SELECT * FROM " + tableName;
-        return executeQuery(query, false);
+        return executeQuery(query,false);
     }
 
     /**

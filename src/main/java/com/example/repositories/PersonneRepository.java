@@ -23,9 +23,7 @@ public class PersonneRepository extends Model<Personne> {
         return super.findAll();
     }
 
-    /**
-     * Sauvegarder une personne
-     */
+  
     public int save(Personne personne) throws SQLException {
         String query = "INSERT INTO personne (code, nom, prenom, date_naissance) VALUES (?, ?, ?, ?)";
 
@@ -33,13 +31,11 @@ public class PersonneRepository extends Model<Personne> {
             personne.getCode(),
             personne.getNom(),
             personne.getPrenom(),
-            new java.sql.Date(personne.getDateNaissance().getTime()) // ✅ Conversion en java.sql.Date
+            new java.sql.Date(personne.getDateNaissance().getTime())
         );
     }
 
-    /**
-     * Mettre à jour une personne
-     */
+
     public int update(Personne personne) throws SQLException {
         String query = "UPDATE personne SET code = ?, nom = ?, prenom = ?, date_naissance = ? WHERE id = ?";
 
@@ -47,7 +43,7 @@ public class PersonneRepository extends Model<Personne> {
             personne.getCode(),
             personne.getNom(),
             personne.getPrenom(),
-            new java.sql.Date(personne.getDateNaissance().getTime()), // ✅ Conversion en java.sql.Date
+            new java.sql.Date(personne.getDateNaissance().getTime()),
             personne.getId()
         );
     }
@@ -57,9 +53,6 @@ public class PersonneRepository extends Model<Personne> {
         return super.delete(id);
     }
 
-    /**
-     * Mapper une ligne SQL (`ResultSet`) vers un objet `Personne`.
-     */
     @Override
     protected Personne mapToEntity(ResultSet rs) throws SQLException {
         return new Personne(
@@ -67,7 +60,7 @@ public class PersonneRepository extends Model<Personne> {
             rs.getString("code"),
             rs.getString("nom"),
             rs.getString("prenom"),
-            rs.getDate("date_naissance") // ✅ PostgreSQL retourne un Date
+            rs.getDate("date_naissance") 
         );
     }
 }

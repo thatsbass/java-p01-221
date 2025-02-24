@@ -1,4 +1,4 @@
-package com.example.database;
+package com.example.database.seeders;
 
 import com.example.config.DatabaseConnection;
 

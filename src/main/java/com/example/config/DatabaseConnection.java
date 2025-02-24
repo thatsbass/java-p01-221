@@ -17,11 +17,7 @@ public class DatabaseConnection {
 
     public static DatabaseConnection getInstance() {
         if (instance == null) {
-            synchronized (DatabaseConnection.class) {
-                if (instance == null) {
-                    instance = new DatabaseConnection();
-                }
-            }
+            instance = new DatabaseConnection();
         }
         return instance;
     }
