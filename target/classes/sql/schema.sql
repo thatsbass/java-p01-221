@@ -5,15 +5,15 @@ CREATE TABLE Personne (
     code VARCHAR(100) UNIQUE NOT NULL,
     nom VARCHAR(100) NOT NULL,
     prenom VARCHAR(100) NOT NULL,
-    dateNaissance DATE NOT NULL
+    date_naissance DATE NOT NULL
 );
 
 CREATE TABLE Adresse (
     id SERIAL PRIMARY KEY,
     ville VARCHAR(100) NOT NULL,
     rue VARCHAR(100) NOT NULL,
-    numeroVilla VARCHAR(100) NOT NULL,
-    personneId INT,
-    FOREIGN KEY (personneId) REFERENCES Personne(id)
+    numero_villa VARCHAR(100) NOT NULL,
+    personne_id INT,
+    FOREIGN KEY (personne_id) REFERENCES Personne(id)
 );
 

@@ -33,13 +33,13 @@ public class DatabaseSeeder {
         };
 
         try {
-            String insertPersonne = "INSERT INTO Personne (code, nom, prenom, dateNaissance) VALUES ";
+            String insertPersonne = "INSERT INTO Personne (code, nom, prenom, date_naissance) VALUES ";
             for (String personne : personnes) {
                 executeUpdate(connection, insertPersonne + personne);
             }
 
           
-            String insertAdresse = "INSERT INTO Adresse (ville, rue, numeroVilla, personneId) VALUES ";
+            String insertAdresse = "INSERT INTO Adresse (ville, rue, numero_villa, personne_id) VALUES ";
             for (String adresse : adresses) {
                 executeUpdate(connection, insertAdresse + adresse);
             }

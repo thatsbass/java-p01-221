@@ -6,8 +6,8 @@ public class Adresse implements Identifiable {
     private int id;
     private String ville;
     private String rue;
-    private String numeroVilla;
-    private int personneId;
+    private String numero_villa;
+    private int personne_id;
 
 
     public Adresse() {
@@ -17,8 +17,8 @@ public class Adresse implements Identifiable {
         this.id = id;
         this.ville = ville;
         this.rue = rue;
-        this.numeroVilla = numeroVilla; 
-        this.personneId = personneId;   
+        this.numero_villa = numeroVilla; 
+        this.personne_id = personneId;   
     }
 
     @Override
@@ -48,18 +48,18 @@ public class Adresse implements Identifiable {
     }
 
     public String getNumeroVilla() { // correction du getter
-        return numeroVilla;
+        return numero_villa;
     }
 
     public void setNumeroVilla(String numeroVilla) { // correction du setter
-        this.numeroVilla = numeroVilla;
+        this.numero_villa = numeroVilla;
     }
 
     public int getPersonneId() { // correction du getter
-        return personneId;
+        return personne_id;
     }
 
     public void setPersonneId(int personneId) { // correction du setter
-        this.personneId = personneId;
+        this.personne_id = personneId;
     }
 }
